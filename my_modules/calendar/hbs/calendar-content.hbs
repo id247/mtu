@@ -1,0 +1,59 @@
+ {{#each days}}
+<li class="calendar-days__item calendar-content" data-date="{{date}}">
+
+	<div class="calendar-content__inner">
+		
+		<div class="calendar-content__main">
+			
+			<div class="calendar-content__image-placeholder">
+				
+				<img src="{{image}}" alt="photo" width="240" class="calendar-content__image" />
+
+			</div><!-- /.calendar-content__iamge-placeholder -->
+
+			<div class="calendar-content__content">
+				
+				<h3 class="calendar-content__title {{title_prefix}}">
+					{{{title}}}
+				</h3><!-- /.calendar-content__title -->
+
+				<div class="calendar-content__text text {{text_prefix}}">
+
+					{{{text}}}
+					
+				</div><!-- /.calendar-content__text -->
+
+				<div class="calendar-content__buttons">
+																
+					<div class="calendar-content__button-placeholder">
+						
+						<a href="#modal-form" class="button button--yellow button--m js-baz-modal">Добавить свое событие</a>
+
+					</div><!-- /.calendar-content__button-placeholder -->
+
+				</div><!-- /.calendar-content__buttons -->
+
+			</div><!-- /.calendar-content__content -->
+
+		</div><!-- /.calendar-content__main -->
+
+		<div class="calendar-content__advice calendar-advice">
+			
+			<h4 class="calendar-advice__title">
+				Совет
+			</h4><!-- /.calendar-advice__title -->
+
+			<div class="calendar-advice__text text">
+				
+				{{{advice}}}
+
+			</div><!-- /.calendar-advice__text -->
+
+		</div><!-- /.calendar-content__advice -->
+
+	</div><!-- /.calendar-content__inner -->
+
+	<a href="#next" class="calendar-content__corner js-calendar-nav"></a>
+		
+</li><!-- /.calendar-days__item -->
+{{/each}}
