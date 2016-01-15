@@ -4,19 +4,17 @@
  * ========================================================================== */
 
 html{
-	min-width: 1020px;
+	min-width: 1040px;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
 	font-size: 16px;
 	line-height: 1.2;
-	font-family: $ubuntu;
+	font-family: $main-font;
 	color: $text;
 }
 
 body{
-	padding: 0 0 65px;
-	background: #7bb2f2 url(../images/bg/body.jpg) 0 0 repeat;
-}
+	}
 
 a{
 	color: inherit;
@@ -73,8 +71,88 @@ sup{
 }
 
 .text{
-	font-size: 16px;
-	line-height: (24/16);
+	font-size: 18px;
+	line-height: (24/18);
+
+	h1,h2,h3,h4,h5{
+		margin: 0 0 1em;
+		font-weight: 700;
+	}
+
+	h1{
+		font-size: 24px;
+	}
+
+	h2{
+		font-size: 24px;
+	}
+
+	h4{
+		font-size: 18px;
+	}
+	
+	a{
+		border-bottom: 1px solid;
+		transition: all .3s;
+		color: $blue;
+		&:hover{
+			border-color: transparent;
+		}		
+	}
+
+	ul{
+		margin: 0 0 2em;
+		li{
+			position: relative;
+			padding: 0 0 0 25px;
+			&:before {
+				content: '';
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: $blue;
+				border-radius: 50%;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+
+			ul{
+				padding-top: 1em;
+
+				li{
+					&:before{
+						background: #fff;
+						border: 2px solid $blue;
+					}
+				}
+			}
+		}
+	}
+
+	ol{
+		counter-reset: my-awesome-counter;
+		margin: 0 0 2em;
+		li{
+			counter-increment: my-awesome-counter;
+			position: relative;
+			padding: 0 0 0 25px;
+			&:before {
+				position: absolute;
+				top: -5px;
+				left: 0;
+				font-style: italic;
+				color: $blue;
+				font-size: 24px;
+				font-weight: 700;
+				content: counter(my-awesome-counter) '.';
+			}
+		}
+	}
+
+	li{
+		margin: 0 0 .5em;
+	}
 }
 
 
@@ -91,15 +169,36 @@ sup{
 	overflow: hidden;
 	position: relative;
 
-	&__content{
+	&:before,
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: -1;
+	}
+	&:before{
+		position: fixed;
+		background: #618caa url(../images/bg/body.jpg) 0 0 repeat;
+		background-size: cover;
+	}
+	&:after{
 		background: #fff;
+		width: 1040px;
 		box-shadow: 0 0 30px rgba(0,0,0,.3);	
-		width: 1020px;
+	}	
+
+	&__content{
+		width: 1040px;
 		margin: 0 auto;
+		padding: 0 0 50px;
 		min-height: 100vh;
 		position: relative;
 		border-bottom: 1px solid #fff;
-
 	}
 }
 
@@ -107,5 +206,550 @@ sup{
 	@include clearfix;
 	margin: auto;
 	padding: 0 0px;
-	width: 980px;
+	width: 920px;
 }
+
+/* ==========================================================================
+ * header
+ * ========================================================================== */
+
+.header{
+	padding: 45px 0 40px;
+	text-align: center;
+
+	&__title{
+		font-weight: 700;
+		font-size: 34px;
+		margin: 0 0 15px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle{
+		font-size: 25px;
+		font-weight: 400;
+		margin: 0 0 40px;
+	}
+
+	&__menu{
+		margin: 0 100px;
+	}
+}
+
+/* ==========================================================================
+ * menu
+ * ========================================================================== */
+
+.menu{
+
+	&__list{
+		margin: 0 0 -28px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 13px 28px;
+		&:first-child{
+			margin-left: 26px;
+			margin-right: 26px;
+		}
+	}
+
+	&__href{
+		color: $blue-links;
+		font-size: 16px;
+
+		&.active{
+			color: #d24000;
+			border-color: transparent;
+		}
+
+		&--olymp{
+			color: #2f7f4a;
+			position: relative;
+			font-weight: 700;
+			&:before,
+			&:after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: -5px;
+			}
+			&:before{
+				@include sprite($lavr-left);	
+				left: -25px;
+			}
+			&:after{
+				@include sprite($lavr-right);	
+				right: -25px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+ * page
+ * ========================================================================== */
+
+.page{
+
+	&__header{
+		margin: 0 0 40px;
+	}
+
+	&__content{
+		@include clearfix;
+	}
+
+	&__left{
+		float: left;
+		width: 650px;
+	}
+
+	&__right{
+		float: right;
+		width: 240px;
+	}
+
+	&__text{
+		margin: 0 0 30px;
+	}
+
+	&__video{
+		text-align: center;
+		margin: 0 0 30px;
+	}
+}
+
+.page-header{
+	background-color: #0081b4;
+	background-image: linear-gradient(-160deg, #0081b4 0%, #00b7e2 100%);
+	color: #fff;
+	padding: 50px 40px 35px;
+	border-radius: 15px;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+	}
+
+	&--opymp{
+		background: url(../images/headers/olymp.jpg) 50% 0 no-repeat;
+		background-size: cover;
+
+		&:before{
+			@include sprite($header-olymp);
+			top: 45px;
+			right: -10px;
+		}
+	}
+
+	&--about{
+		background: url(../images/headers/about.jpg) 50% 0 no-repeat;
+		background-size: cover;
+	}
+
+	&--conditions{
+		background: url(../images/headers/conditions.jpg) 50% 0 no-repeat;
+		background-size: cover;
+	}
+
+	&--schools{
+		background: url(../images/headers/schools.jpg) 50% 0 no-repeat;
+		background-size: cover;
+	}
+
+	&--filials{
+		background: url(../images/bg/map.jpg) 50% 0 no-repeat;
+		background-size: cover;
+	}
+
+	&--programms{
+
+		&:before{
+			@include sprite($header-ege);
+			bottom: 0px;
+			top: auto;
+			right: 40px;
+		}
+	}
+
+	&--college{
+
+		&:before{
+			@include sprite($header-college);
+			bottom: 0px;
+			top: auto;
+			right: 50px;
+		}
+	}
+
+	&__title{
+		text-transform: uppercase;
+		margin: 0 0 15px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	&__text{
+		margin: 0 0 15px;
+		font-size: 18px;
+		line-height: (24/18);
+	}
+
+	&__subtext{
+		font-size: 14px;
+		line-height: (24/14);
+	}
+
+}
+
+.olymp-page{
+
+}
+
+.olymp-page-prises{
+
+	&__title{
+		font-size: 24px;
+		margin: 0 0 15px;
+		font-weight: 700;
+	}
+
+	&__text{
+		margin: 0 0 40px;
+	}
+
+	&__list{
+		text-align: center;	
+		margin: 0 0 50px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+
+		width: 485px;
+		margin: 0 10px;
+
+		&:first-child{
+			width: 280px;
+		}
+	}
+
+	&__image-placeholder{
+		height: 170px;
+		line-height: 170px;
+		margin: 0 0 10px;
+	}
+	&__image{
+		vertical-align: middle;
+	}
+
+	&__button-placeholder{
+		text-align: center;
+	}
+}
+
+.about-page{
+
+	&__content{
+		margin: 0 -40px 60px 0;
+	}
+
+	&__list{
+		width: 290px;
+		margin: 0 20px 0 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__item{
+		margin: 0 0 35px;
+		padding: 0 0 0 50px;
+		position: relative;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&--1:before{
+			@include sprite($about-1);
+		}
+
+		&--2:before{
+			@include sprite($about-2);
+		}
+
+		&--3:before{
+			@include sprite($about-3);
+		}
+
+		&--4:before{
+			@include sprite($about-4);
+		}
+
+		&--5:before{
+			@include sprite($about-5);
+		}
+
+		&--6:before{
+			@include sprite($about-6);
+		}
+
+		&--7:before{
+			@include sprite($about-7);
+		}
+
+		&--8:before{
+			@include sprite($about-8);
+		}
+
+		&--9:before{
+			@include sprite($about-9);
+		}
+
+		&--10:before{
+			@include sprite($about-10);
+		}
+	}
+
+	&__bonus{
+		border: 2px dashed $blue;
+		padding: 50px 25px;
+		margin: 0 0 30px;
+		border-radius: 50px;
+		text-align: center;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: -33px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			@include sprite($smile);
+			background-color: #fff;
+			border: 10px solid #fff;
+			box-sizing: content-box;
+		}
+	}
+
+	&__button-placeholder{
+		text-align: center;	
+		margin: 0 0 30px;
+	}
+}
+
+.programms-page{
+
+	&__title{
+		font-size: 24px;
+		font-weight: 700;
+		margin: 0 0 1em;
+	}
+
+	&__table{
+		margin: 0 0 40px;
+	}
+
+	&__table-inner{
+		max-height: 410px;
+		margin: 0 0 20px;
+		overflow: hidden;
+		//transition: all linear 1.5s;
+
+		&.visible{
+			max-height: none;
+			//transition: all linear .5s;
+		}		
+	}
+}
+
+.programms-table{
+	width: 100%;
+	font-size: 14px;
+
+	&__th,
+	&__td{
+		padding: 20px 0 20px 20px;
+		border-bottom: 1px solid #e1e1e1;
+		&:first-child{
+			padding-left: 0;
+		}
+		&:last-child{
+			//width: 345px;
+		}
+	}
+
+	&__th{
+		text-align: left;
+		font-weight: 700;
+		white-space: nowrap;
+	}
+
+	&__td{
+		font-weight: 700;
+		font-size: 18px;
+		&:first-child{
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+}
+
+.college-page{
+
+}
+
+.college-page-time{
+
+	border: 2px dashed $blue;
+	padding: 40px 25px 30px;
+	margin: 0 0 30px;
+	border-radius: 50px;
+	text-align: center;
+	position: relative;
+	text-align: center;
+
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: -33px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		@include sprite($clock);
+		background-color: #fff;
+		border: 10px solid #fff;
+		box-sizing: content-box;
+	}
+
+	&__title{
+		font-size: 24px;
+		margin: 0 0 20px;
+		font-weight: 700;
+	}
+
+	&__class{
+		font-size: 14px;
+		margin: 0 0 5px;
+	}
+
+	&__duration{
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0 0 15px;
+	}
+}
+
+.schools-page{
+
+}
+
+.schools-page-info{
+	
+	&__item{
+		margin: 40px 0 0;
+		font-size: 14px;
+		line-height: (20/14);
+
+		&:before{
+			content: '';
+			display: block;
+			margin: 0 0 10px;
+		}
+		&--1:before{
+			@include sprite($schools-1);
+		}
+		&--2:before{
+			@include sprite($schools-2);
+		}
+	}
+}
+
+.campuses-page{
+
+	&__map{
+		background: #fff url(../images/bg/map.jpg) 50% 0 no-repeat;
+		height: image-height('../images/bg/map.jpg');
+		position: relative;
+		color: #fff;
+		padding: 50px 40px;
+	}
+
+	&__title{
+		text-transform: uppercase;
+		margin: 0 0 15px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	&__href{
+		background: #2f7f4a;
+		display: inline-block;
+		padding: 3px 10px;
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+		position: absolute;
+		&:hover{
+			opacity: .9;
+		}
+
+		&--1{
+			top: 76px;
+			left: 510px;
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				@include sprite($red-star);
+				margin: -3px 5px 0 0;	
+			}
+		}
+
+		&--2{
+			top: 15px;
+			left: 535px;
+		}
+
+		&--3{
+			top: 45px;
+			left: 530px;
+		}
+
+		&--4{
+			top: 110px;
+			left: 520px;
+		}
+
+		&--5{
+			top: 410px;
+			left: 290px;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+ * 
+ * ========================================================================== */
+
+
+
+
