@@ -41,6 +41,16 @@
 				<li class="menu__item">
 					<a href="@@link7" class="link menu__href @@if (currentLink == 7) { active }">Предложение для школ</a>
 				</li>
+				@@ if (server !== 'mosreg'){
+				<li class="menu__item">
+					<a href="https://networks.dnevnik.ru/1000000616671" class="link menu__href menu__href--dnevnik">Группа МИРЭА</a>
+				</li>
+				}
+				@@ if (server === 'mosreg'){
+				<li class="menu__item">
+					<a href="https://networks.school.mosreg.ru/1000000588061" class="link menu__href menu__href--mosreg">Группа МИРЭА</a>
+				</li>
+				}
 			
 			</ul> <!-- /.menu -->
 			

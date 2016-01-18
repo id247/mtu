@@ -1,6 +1,6 @@
 @@include("./common/head.html", {
-	"server": "dnevnik",
-	"title": "Колледж приборостроения и информационных технологий"
+	"server": "mosreg",
+	"title": "Филиалы"
 })
 
 	<div class="body-container">
@@ -9,7 +9,7 @@
 		<div class="body-container__content">
 			
 			@@include("./common/header.html", {
-				"currentLink": "6",
+				"currentLink": "5",
 				"link1": "mtu-olymp",
 				"link2": "mtu-about",
 				"link3": "mtu-programms",
@@ -17,10 +17,11 @@
 				"link5": "mtu-filials",
 				"link6": "mtu-college",
 				"link7": "mtu-schools",
-				"server": "dnevnik"
+				"server": "mosreg"
 			})
 
-			@@include("./pages/college.html", {
+			@@include("./pages/filials.html", {
+				"programmsLink": "mtu-programms"
 			})
 	
 		</div><!-- /.body-container__content -->
@@ -31,5 +32,5 @@
 @@include("./common/modals.html")
 
 @@include("./common/foot.html", {
-	"server": "dnevnik"
+	"server": "mosreg"
 })

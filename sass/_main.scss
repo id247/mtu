@@ -14,7 +14,8 @@ html{
 }
 
 body{
-	}
+	background: #fff;
+}
 
 a{
 	color: inherit;
@@ -282,6 +283,33 @@ sup{
 			&:after{
 				@include sprite($lavr-right);	
 				right: -25px;
+			}
+		}
+
+		&--dnevnik,
+		&--mosreg{
+			margin-left: 10px;
+			position: relative;
+			&:before{
+				
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: -20px;
+			}
+		}
+
+
+		&--dnevnik{
+			&:before{
+				@include sprite($dnevnik);	
+			}
+		}
+
+		&--mosreg{
+			&:before{
+				@include sprite($mosreg);	
 			}
 		}
 	}
