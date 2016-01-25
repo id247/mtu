@@ -180,7 +180,6 @@ sup{
 		right: 0;
 		bottom: 0;
 		margin: auto;
-		z-index: -1;
 	}
 	&:before{
 		position: fixed;
@@ -200,6 +199,7 @@ sup{
 		min-height: 100vh;
 		position: relative;
 		border-bottom: 1px solid #fff;
+		z-index: 2;
 	}
 }
 
