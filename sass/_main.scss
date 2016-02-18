@@ -576,6 +576,127 @@ sup{
 	}
 }
 
+.courses-page{
+
+	&__links{
+		margin: 0 0 70px;
+	}
+
+	&__prices{
+		margin: 0 0 50px;
+	}
+}
+
+.courses-links{
+
+	&__title{
+		font-size: 20px;
+		text-align: center;
+		font-weight: 700;
+		margin: 0 0 2.5em;		
+	}
+
+	&__list{
+		@include list;
+		text-align: center;
+		margin: 0 -2% -20px;
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 18%;
+		margin: 0 .5% 20px;
+	}
+
+	&__href{
+		display: inline-block;
+		position: relative;
+		line-height: 1.5;
+		//font-weight: 700;
+
+		&:before{
+			content: '';
+			display: block;
+			margin: 0 auto 15px;
+		}
+
+		&--1:before{
+			@include sprite($courses-1);
+		}
+
+		&--2:before{
+			@include sprite($courses-2);
+		}
+
+		&--3:before{
+			@include sprite($courses-3);
+		}
+
+		&--4:before{
+			@include sprite($courses-4);
+		}
+
+		&--5:before{
+			@include sprite($courses-5);
+		}
+
+		&--6:before{
+			@include sprite($courses-6);
+		}
+
+		&--7:before{
+			@include sprite($courses-7);
+		}
+		&--8:before{
+			@include sprite($courses-8);
+		}
+		&--9:before{
+			@include sprite($courses-9);
+		}
+		&--10:before{
+			@include sprite($courses-10);
+		}
+
+		&:hover{
+			.courses-links__text{
+				border-color: inherit;
+			}
+		}
+
+	
+	}
+
+	&__text{
+		@extend .inverselink;
+	}
+}
+
+.courses-prices{
+
+	&__table{
+		margin: 0 auto;
+		table-layout: fixed;
+	}
+
+	&__tr{
+		
+	}
+
+	&__th{
+		font-weight: 700;
+		text-align: center;
+		padding: 15px 25px;
+		border: 1px solid;	
+	}
+
+	&__td{
+		padding: 15px 25px;
+		border: 1px solid;	
+	}
+}
+
+
 .programms-page{
 
 	&__title{
