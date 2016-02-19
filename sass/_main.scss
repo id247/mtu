@@ -232,7 +232,7 @@ sup{
 	}
 
 	&__menu{
-		margin: 0 60px;
+		margin: 0 -20px;
 	}
 }
 
@@ -249,7 +249,7 @@ sup{
 	&__item{
 		display: inline-block;
 		vertical-align: top;
-		margin: 0 13px 28px;
+		margin: 0 10px 28px;
 		&:first-child{
 			margin-left: 26px;
 			margin-right: 26px;
@@ -660,7 +660,7 @@ sup{
 
 		&:hover{
 			.courses-links__text{
-				border-color: inherit;
+				//border-color: inherit;
 			}
 		}
 
@@ -668,14 +668,14 @@ sup{
 	}
 
 	&__text{
-		@extend .inverselink;
+		//@extend .inverselink;
 	}
 }
 
 .courses-prices{
 
 	&__table{
-		margin: 0 auto;
+		margin: 0 auto 30px;
 		table-layout: fixed;
 	}
 
@@ -693,6 +693,10 @@ sup{
 	&__td{
 		padding: 15px 25px;
 		border: 1px solid;	
+	}
+
+	&__button-placeholder{
+		text-align: center;
 	}
 }
 
