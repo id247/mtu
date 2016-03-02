@@ -103,6 +103,9 @@ sup{
 
 	ul{
 		margin: 0 0 2em;
+		&:last-child{
+			margin-bottom: 0;
+		}
 		li{
 			position: relative;
 			padding: 0 0 0 25px;
@@ -578,23 +581,38 @@ sup{
 
 .courses-page{
 
-	&__links{
-		margin: 0 0 70px;
+	&__subjects{
+		margin: 0 0 60px;
 	}
 
 	&__prices{
 		margin: 0 0 50px;
 	}
+
+	&__title{
+		font-size: 24px;
+		font-weight: 700;
+		margin: 0 0 1em;
+	}
 }
 
-.courses-links{
+.page-header-courses{
+
+	text-align: center;
 
 	&__title{
 		font-size: 20px;
 		text-align: center;
 		font-weight: 700;
-		margin: 0 0 2.5em;		
+		margin: 0 0 .5em;	
+		text-transform: uppercase;	
 	}
+
+	&__text{
+		font-size: 18px;
+		margin: 0 0 2.0em;
+	}
+
 
 	&__list{
 		@include list;
@@ -605,15 +623,10 @@ sup{
 	&__item{
 		display: inline-block;
 		vertical-align: top;
-		width: 18%;
-		margin: 0 .5% 20px;
-	}
-
-	&__href{
-		display: inline-block;
-		position: relative;
-		line-height: 1.5;
-		//font-weight: 700;
+		width: 19%;
+		font-size: 17px;
+		margin: 0 .2% 20px;
+		font-weight: 700;
 
 		&:before{
 			content: '';
@@ -641,62 +654,146 @@ sup{
 			@include sprite($courses-5);
 		}
 
-		&--6:before{
-			@include sprite($courses-6);
-		}
-
-		&--7:before{
-			@include sprite($courses-7);
-		}
-		&--8:before{
-			@include sprite($courses-8);
-		}
-		&--9:before{
-			@include sprite($courses-9);
-		}
-		&--10:before{
-			@include sprite($courses-10);
-		}
-
-		&:hover{
-			.courses-links__text{
-				//border-color: inherit;
-			}
-		}
-
 	
-	}
-
-	&__text{
-		//@extend .inverselink;
 	}
 }
 
 .courses-prices{
 
-	&__table{
-		margin: 0 auto 30px;
-		table-layout: fixed;
+	&__list{
+		@include list;
+		margin: 0 0 25px;
 	}
 
-	&__tr{
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 15px 0 0;
+	}
+}
+
+.courses-prices-item{
+
+	&__info{
+		margin: 0 0 25px;
+		font-size: 18px;
+		line-height: 1.5;
+		padding: 5px 0 0 82px;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 6px;
+		}
+
+		&--days:before{
+			@include sprite($calendar);
+		}
+
+		&--costs:before{
+			@include sprite($wallet);
+			top: 3px;
+		}
+	}
+}
+
+.tabs{
+
+	&__nav{
 		
 	}
 
-	&__th{
+	&__content{
+		
+	}
+
+	&__item{
+		background: #f6f4ef;
+		padding: 50px 40px;
+	}
+}
+
+.tabs-nav{
+
+	&__list{
+		display: flex;
+    	flex-wrap: nowrap;
+		@include list;
+	}
+
+	&__item{
+		flex-grow: 1;
+		display: inline-block;
+	}
+
+	&__href{
+		display: block;
+		padding: 20px 30px;
+		color: $blue;	
+		font-size: 18px;
 		font-weight: 700;
-		text-align: center;
-		padding: 15px 25px;
-		border: 1px solid;	
+		text-align: center;	
+
+		&:hover{
+			color: $text;
+		}
+
+		
+		&.active{
+			background: #f6f4ef;
+			color: $text;
+		}
+	}
+}
+
+.subject{
+
+	&__header{
+		margin: 0 0 30px;
 	}
 
-	&__td{
-		padding: 15px 25px;
-		border: 1px solid;	
+	&__list{
+		margin-left: 25px; 
 	}
 
-	&__button-placeholder{
-		text-align: center;
+
+}
+
+.subject-header{
+	@include clearfix;
+
+	&__image-placeholder{
+		float: left;
+		width: 75px;
+	}
+
+	&__image{
+		vertical-align: top;
+		width: 100%;
+		height: auto;
+	}
+
+	&__content{
+		margin: 0 0 0 100px;
+	}
+
+	&__uptitle{
+		font-size: 14px;
+		font-weight: 700;
+		margin: 0 0 .7em;
+	}
+
+	&__title{
+		font-size: 24px;
+		font-weight: 400;
+		margin: 0 0 .3em;
+	}
+
+	&__{
+		
 	}
 }
 

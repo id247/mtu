@@ -5,6 +5,59 @@ import 'babel-polyfill';
 const app = ( () => {
 
 	/* ==========================================================================
+	 * tabs
+	 * ========================================================================== */
+	
+	function tabs(){
+		
+		const tabsHrefs = document.querySelectorAll('.tabs-nav__href');
+		const tabsItems = document.querySelectorAll('.tabs__item');
+
+		tabsHrefs[0] && tabsHrefs[0].classList.add('active');
+
+		[].forEach.call( tabsItems, (item, index) => {
+
+			if (index > 0 ){
+				item.style.display = 'none';
+			}
+
+		});
+		
+		[].forEach.call( tabsHrefs, (href) => {
+
+			href && href.addEventListener('click', (e) => {
+
+				e.preventDefault();
+
+				const target = href.getAttribute('href').substr(1);
+
+				[].forEach.call( tabsHrefs, (item) => {
+					if (item === href ){
+						item.classList.add('active');
+					}else{
+						item.classList.remove('active');
+					}
+				});
+
+				[].forEach.call( tabsItems, (item) => {
+
+					if (item.id === target ){
+						item.style.display = '';
+					}else{
+						item.style.display = 'none';
+					}
+
+				});
+
+			});
+
+		});		
+	
+		
+	}	
+
+
+	/* ==========================================================================
 	 * EVENTS
 	 * ========================================================================== */
 	
@@ -14,12 +67,9 @@ const app = ( () => {
 		
 		[].forEach.call( programmsOpeners, (element) => {
 
-			element && element.addEventListener('click', function(e){
+			element && element.addEventListener('click', (e) => {
 
 				e.preventDefault();
-
-				console.log(element.parentNode);
-				console.log(element.parentNode.querySelector('.programms-page__table-inner'));
 
 				element.parentNode.parentNode
 						.querySelector('.programms-page__table-inner')
@@ -31,7 +81,7 @@ const app = ( () => {
 			});
 
 		});		
-
+		
 	}
 
 	/*
@@ -40,6 +90,7 @@ const app = ( () => {
 	function init(options){
 
 		events();
+		tabs();
 
 	}
 
