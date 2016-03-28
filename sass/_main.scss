@@ -548,6 +548,10 @@ sup{
 		&--10:before{
 			@include sprite($about-10);
 		}
+		
+		&--11:before{
+			@include sprite($about-11);
+		}
 	}
 
 	&__bonus{

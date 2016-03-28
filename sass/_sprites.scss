@@ -24,15 +24,26 @@ $about-1-image: '../images/sprite.png';
 $about-1: (404px, 29px, -404px, -29px, 26px, 30px, 431px, 380px, '../images/sprite.png', 'about-1', );
 $about-10-name: 'about-10';
 $about-10-x: 404px;
-$about-10-y: 176px;
+$about-10-y: 228px;
 $about-10-offset-x: -404px;
-$about-10-offset-y: -176px;
+$about-10-offset-y: -228px;
 $about-10-width: 26px;
 $about-10-height: 24px;
 $about-10-total-width: 431px;
 $about-10-total-height: 380px;
 $about-10-image: '../images/sprite.png';
-$about-10: (404px, 176px, -404px, -176px, 26px, 24px, 431px, 380px, '../images/sprite.png', 'about-10', );
+$about-10: (404px, 228px, -404px, -228px, 26px, 24px, 431px, 380px, '../images/sprite.png', 'about-10', );
+$about-11-name: 'about-11';
+$about-11-x: 404px;
+$about-11-y: 150px;
+$about-11-offset-x: -404px;
+$about-11-offset-y: -150px;
+$about-11-width: 26px;
+$about-11-height: 26px;
+$about-11-total-width: 431px;
+$about-11-total-height: 380px;
+$about-11-image: '../images/sprite.png';
+$about-11: (404px, 150px, -404px, -150px, 26px, 26px, 431px, 380px, '../images/sprite.png', 'about-11', );
 $about-2-name: 'about-2';
 $about-2-x: 404px;
 $about-2-y: 0px;
@@ -68,15 +79,15 @@ $about-4-image: '../images/sprite.png';
 $about-4: (257px, 189px, -257px, -189px, 29px, 21px, 431px, 380px, '../images/sprite.png', 'about-4', );
 $about-5-name: 'about-5';
 $about-5-x: 404px;
-$about-5-y: 150px;
+$about-5-y: 176px;
 $about-5-offset-x: -404px;
-$about-5-offset-y: -150px;
+$about-5-offset-y: -176px;
 $about-5-width: 26px;
 $about-5-height: 26px;
 $about-5-total-width: 431px;
 $about-5-total-height: 380px;
 $about-5-image: '../images/sprite.png';
-$about-5: (404px, 150px, -404px, -150px, 26px, 26px, 431px, 380px, '../images/sprite.png', 'about-5', );
+$about-5: (404px, 176px, -404px, -176px, 26px, 26px, 431px, 380px, '../images/sprite.png', 'about-5', );
 $about-6-name: 'about-6';
 $about-6-x: 404px;
 $about-6-y: 119px;
@@ -90,15 +101,15 @@ $about-6-image: '../images/sprite.png';
 $about-6: (404px, 119px, -404px, -119px, 22px, 31px, 431px, 380px, '../images/sprite.png', 'about-6', );
 $about-7-name: 'about-7';
 $about-7-x: 404px;
-$about-7-y: 200px;
+$about-7-y: 202px;
 $about-7-offset-x: -404px;
-$about-7-offset-y: -200px;
+$about-7-offset-y: -202px;
 $about-7-width: 24px;
 $about-7-height: 26px;
 $about-7-total-width: 431px;
 $about-7-total-height: 380px;
 $about-7-image: '../images/sprite.png';
-$about-7: (404px, 200px, -404px, -200px, 24px, 26px, 431px, 380px, '../images/sprite.png', 'about-7', );
+$about-7: (404px, 202px, -404px, -202px, 24px, 26px, 431px, 380px, '../images/sprite.png', 'about-7', );
 $about-8-name: 'about-8';
 $about-8-x: 97px;
 $about-8-y: 328px;
@@ -200,15 +211,15 @@ $courses-5-image: '../images/sprite.png';
 $courses-5: (230px, 211px, -230px, -211px, 53px, 52px, 431px, 380px, '../images/sprite.png', 'courses-5', );
 $dnevnik-name: 'dnevnik';
 $dnevnik-x: 404px;
-$dnevnik-y: 243px;
+$dnevnik-y: 269px;
 $dnevnik-offset-x: -404px;
-$dnevnik-offset-y: -243px;
+$dnevnik-offset-y: -269px;
 $dnevnik-width: 16px;
 $dnevnik-height: 16px;
 $dnevnik-total-width: 431px;
 $dnevnik-total-height: 380px;
 $dnevnik-image: '../images/sprite.png';
-$dnevnik: (404px, 243px, -404px, -243px, 16px, 16px, 431px, 380px, '../images/sprite.png', 'dnevnik', );
+$dnevnik: (404px, 269px, -404px, -269px, 16px, 16px, 431px, 380px, '../images/sprite.png', 'dnevnik', );
 $header-college-name: 'header-college';
 $header-college-x: 0px;
 $header-college-y: 211px;
@@ -266,26 +277,26 @@ $lavr-right-image: '../images/sprite.png';
 $lavr-right: (126px, 328px, -126px, -328px, 27px, 30px, 431px, 380px, '../images/sprite.png', 'lavr-right', );
 $mosreg-name: 'mosreg';
 $mosreg-x: 404px;
-$mosreg-y: 226px;
+$mosreg-y: 252px;
 $mosreg-offset-x: -404px;
-$mosreg-offset-y: -226px;
+$mosreg-offset-y: -252px;
 $mosreg-width: 16px;
 $mosreg-height: 17px;
 $mosreg-total-width: 431px;
 $mosreg-total-height: 380px;
 $mosreg-image: '../images/sprite.png';
-$mosreg: (404px, 226px, -404px, -226px, 16px, 17px, 431px, 380px, '../images/sprite.png', 'mosreg', );
+$mosreg: (404px, 252px, -404px, -252px, 16px, 17px, 431px, 380px, '../images/sprite.png', 'mosreg', );
 $red-star-name: 'red-star';
 $red-star-x: 404px;
-$red-star-y: 259px;
+$red-star-y: 285px;
 $red-star-offset-x: -404px;
-$red-star-offset-y: -259px;
+$red-star-offset-y: -285px;
 $red-star-width: 12px;
 $red-star-height: 12px;
 $red-star-total-width: 431px;
 $red-star-total-height: 380px;
 $red-star-image: '../images/sprite.png';
-$red-star: (404px, 259px, -404px, -259px, 12px, 12px, 431px, 380px, '../images/sprite.png', 'red-star', );
+$red-star: (404px, 285px, -404px, -285px, 12px, 12px, 431px, 380px, '../images/sprite.png', 'red-star', );
 $schools-1-name: 'schools-1';
 $schools-1-x: 203px;
 $schools-1-y: 276px;
@@ -333,7 +344,7 @@ $wallet: (163px, 211px, -163px, -211px, 67px, 59px, 431px, 380px, '../images/spr
 $spritesheet-width: 431px;
 $spritesheet-height: 380px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($about-1, $about-10, $about-2, $about-3, $about-4, $about-5, $about-6, $about-7, $about-8, $about-9, $calendar, $clock, $courses-1, $courses-2, $courses-3, $courses-4, $courses-5, $dnevnik, $header-college, $header-ege, $header-olymp, $lavr-left, $lavr-right, $mosreg, $red-star, $schools-1, $schools-2, $smile, $wallet, );
+$spritesheet-sprites: ($about-1, $about-10, $about-11, $about-2, $about-3, $about-4, $about-5, $about-6, $about-7, $about-8, $about-9, $calendar, $clock, $courses-1, $courses-2, $courses-3, $courses-4, $courses-5, $dnevnik, $header-college, $header-ege, $header-olymp, $lavr-left, $lavr-right, $mosreg, $red-star, $schools-1, $schools-2, $smile, $wallet, );
 $spritesheet: (431px, 380px, '../images/sprite.png', $spritesheet-sprites, );
 
 /*
@@ -346,6 +357,14 @@ The provided mixins are intended to be used with the array-like variables
 .icon-email {
   @include sprite($icon-email);
 }
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
 */
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
