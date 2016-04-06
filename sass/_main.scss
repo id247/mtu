@@ -1002,9 +1002,95 @@ sup{
 
 
 /* ==========================================================================
- * 
+ * placemark
  * ========================================================================== */
 
+.placemark{
+	background: #fff;
+	border: 3px solid $blue;
+	//color: #fff;
+	padding: 5px;
+	display: block;
+	width: 50px;
+
+	font-size: 15px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+	position: relative;
+
+	border-radius: 5px;
+
+	box-sizing: border-box;
+
+	height: 35px;
+	top: -55px;
+	left: -35px;
+
+	&:before{
+
+		content: '';
+		display: block;
+	
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 10px 0 10px;
+		border-color: $blue transparent transparent transparent;
+
+		position: absolute;
+
+		top: 100%;
+		left: 20px;
+
+	}
+
+	&--1{
+		width: 250px;
+	}
+
+	&--2{
+		width: 180px;
+	}
+
+	&--3{
+		width: 230px;
+	}
+
+	&--4{
+		width: 250px;
+		top: auto;
+		bottom: -25px;
+
+		&:before{
+			border-width: 0 10px 25px 10px;
+			border-color: transparent transparent $blue transparent;
+			top: auto;
+			bottom: 100%;
+		}
+	}
+
+	&--5{
+		width: 210px;
+	}
+
+	&--6{
+		width: 210px;
+		top: auto;
+		bottom: -25px;
+
+		&:before{
+			border-width: 0 10px 25px 10px;
+			border-color: transparent transparent $blue transparent;
+			top: auto;
+			bottom: 100%;
+		}
+	}
+
+	&__text{
+
+	}
+}
 
 
 

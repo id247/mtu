@@ -128,12 +128,20 @@
 
 			</div><!-- /.page__text -->
 
-			<div class="about-page__map">
+			<div class="about-page__map" id="map" style="height: 700px;">
 				
-				<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=9EmKds-3V9wQtDlYP4olq6bXGq7Sen1S&amp;width=100%&amp;height=612&amp;lang=ru_RU&amp;sourceType=constructor"></script>
+				
 
 			</div><!-- /.about-page__map -->
-
+			
+			<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU"></script>
+			@@if (server !== "local"){
+			<script src="https://ad.csdnevnik.ru/special/staging/mtu/js/map.js"></script>
+			}
+			@@if (server === "local"){
+			<script src="js/map.js"></script>
+			}
+			
 
 		</div><!-- /.page__content -->
 	
