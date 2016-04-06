@@ -1087,6 +1087,26 @@ sup{
 		}
 	}
 
+	&--7{
+		width: 230px;
+	}
+
+	&--8{
+		width: 200px;
+		top: auto;
+		bottom: -25px;
+		left: -180px;
+
+		&:before{
+			border-width: 0 10px 25px 10px;
+			border-color: transparent transparent $blue transparent;
+			top: auto;
+			bottom: 100%;
+			left: auto;
+			right: 20px;
+		}
+	}
+
 	&__text{
 
 	}
