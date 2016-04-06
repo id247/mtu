@@ -1,6 +1,6 @@
 @@include("./common/head.html", {
-	"server": "dnevnik",
-	"title": "Дни открытых дверей"
+	"server": "mosreg",
+	"title": "Предложение для школ"
 })
 
 	<div class="body-container">
@@ -9,7 +9,7 @@
 		<div class="body-container__content">
 			
 			@@include("./common/header.html", {
-				"currentLink": "8",
+				"currentLink": "12",
 				"link1": "mtu-olymp",
 				"link2": "mtu-about",
 				"link3": "mtu-programms",
@@ -22,10 +22,10 @@
 				"link10": "mtu-courses",
 				"link11": "mtu-ege",
 				"link12": "mtu-scholarship",
-				"server": "dnevnik"
+				"server": "mosreg"
 			})
 
-			@@include("./pages/days.html", {
+			@@include("./pages/scholarship.html", {
 			})
 	
 		</div><!-- /.body-container__content -->
@@ -36,5 +36,5 @@
 @@include("./common/modals.html")
 
 @@include("./common/foot.html", {
-	"server": "dnevnik"
+	"server": "mosreg"
 })

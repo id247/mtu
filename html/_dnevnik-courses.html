@@ -1,6 +1,6 @@
 @@include("./common/head.html", {
 	"server": "dnevnik",
-	"title": "Физико-математическая олимпиада МИРЭА"
+	"title": "Онлайн подготовка к ЕГЭ"
 })
 
 	<div class="body-container">
@@ -9,7 +9,7 @@
 		<div class="body-container__content">
 			
 			@@include("./common/header.html", {
-				"currentLink": "1",
+				"currentLink": "10",
 				"link1": "mtu-olymp",
 				"link2": "mtu-about",
 				"link3": "mtu-programms",
@@ -21,10 +21,12 @@
 				"link9": "mtu-excursions",
 				"link10": "mtu-courses",
 				"link11": "mtu-ege",
+				"link12": "mtu-scolarship",
 				"server": "dnevnik"
 			})
 
-			@@include("./pages/olymp.html")
+			@@include("./pages/courses.html", {
+			})
 	
 		</div><!-- /.body-container__content -->
 
