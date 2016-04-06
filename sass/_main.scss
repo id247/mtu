@@ -366,17 +366,6 @@ sup{
 		position: absolute;
 	}
 
-	&--opymp{
-		background: url(../images/headers/olymp.jpg) 50% 0 no-repeat;
-		background-size: cover;
-
-		&:before{
-			@include sprite($header-olymp);
-			top: 45px;
-			right: -10px;
-		}
-	}
-
 	&--about{
 		background: url(../images/headers/about.jpg) 50% 0 no-repeat;
 		background-size: cover;
@@ -414,6 +403,17 @@ sup{
 			bottom: 0px;
 			top: auto;
 			right: 50px;
+		}
+	}
+
+	&--scholarship{
+		min-height: 222px;
+		
+		&:before{
+			@include sprite($header-scholarship);
+			bottom: 0px;
+			top: auto;
+			right: 0px;
 		}
 	}
 
