@@ -235,7 +235,23 @@ sup{
 	}
 
 	&__menu{
-		margin: 0 -20px;
+		margin: 0 -20px 30px;
+	}
+}
+
+/* ==========================================================================
+ * header-subscribe
+ * ========================================================================== */
+
+.header-subscribe{
+	text-align: center;
+	
+	&__text{
+		margin: 0 0 20px;
+	}
+
+	&__button-placeholder{
+		text-align: center;
 	}
 }
 
