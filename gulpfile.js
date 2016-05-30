@@ -231,7 +231,7 @@ gulp.task('clean', function(callback) {
 	return $.del([destFolder]);
 });
 
-gulp.task('build', gulp.series('assets', gulp.parallel('sass', 'html', 'webpack')));
+gulp.task('build', gulp.series('assets', 'sass', gulp.parallel('html', 'webpack')));
 
 
 //PUBLIC TASKS
