@@ -568,6 +568,10 @@ sup{
 		&--11:before{
 			@include sprite($about-11);
 		}
+		
+		&--12:before{
+			@include sprite($about-12);
+		}
 	}
 
 	&__bonus{
