@@ -1016,9 +1016,58 @@ sup{
 }
 
 
+/* ==========================================================================
+ * prepare-page
+ * ========================================================================== */
+.prepare-page{
+
+	&__buttons{
+		margin: 0 0 100px;
+	}
+
+	&__button-placeholder{
+		margin: 0 20px 0 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__table{
+		margin: 0 0 20px;
+	}
+}
 
 
+.prepare-table{
+	width: 100%;
 
+	th{
+		text-align: center;
+		font-weight: 700;
+		padding: 10px;
+		border: 1px solid #ccc;
+		vertical-align: middle;
+	}
+
+	td{
+		padding: 10px;
+		border: 1px solid #ccc;
+		vertical-align: middle;
+		white-space: nowrap;
+
+		&:first-child{
+			white-space: normal;
+		}
+	}
+
+	ul{
+		list-style-type: disc;
+		margin: 0 0 0 20px;
+	}
+
+	li{
+		margin: 0 0 10px;
+	}
+}
 
 
 /* ==========================================================================
