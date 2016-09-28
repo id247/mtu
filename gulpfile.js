@@ -104,7 +104,13 @@ gulp.task('html', function(callback){
 				prefix: '@@',
 				basepath: '@file',
 				context: {
-					'server': folder
+					server: folder,
+					gaSubscribeNews: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') {  ga(\'send\', \'event\', \'Подписка на новости\', \'Переход\'); }"',
+					gaVk: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') { ga(\'send\', \'event\', \'Группа ВК\', \'Переход\'); }"',
+					gaGuide: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') { ga(\'send\', \'event\', \'Гид по специальностям и направлениям подготовки\', \'Переход\'); }"',
+					gaCourses: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') { ga(\'send\', \'event\', \'Записаться на курсы\', \'Переход\'); }"',
+					gaExcursions: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') { ga(\'send\', \'event\', \'Запись на экскурсии\', \'Переход\'); }"',
+					gaCollege: 'onClick="console.log(\'send ga\'); if (typeof ga === \'function\') { ga(\'send\', \'event\', \'Подробнее\', \'Переход\'); }"',
 				},
 				indent: true
 			}))
